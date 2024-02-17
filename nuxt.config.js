@@ -26,6 +26,9 @@ export default defineNuxtConfig ({
   loading: true,
 
   vite: {
+    ssr: {
+      noExternal: ['html2pdf.js'],
+    },
   },
 
   devServer: {
@@ -54,5 +57,6 @@ export default defineNuxtConfig ({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+    transpile: ['html2pdf.js'],
+  },
 });
