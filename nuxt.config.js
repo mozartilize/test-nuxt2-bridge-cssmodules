@@ -1,9 +1,7 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
-
 export default defineNuxtConfig ({
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'test-nuxt2-bridge-cssmodules',
+    title: 'test-nuxt3',
     htmlAttrs: {
       lang: 'en'
     },
@@ -26,6 +24,9 @@ export default defineNuxtConfig ({
   loading: true,
 
   vite: {
+    // ssr: {
+    //   noExternal: ['html2pdf.js'],
+    // },
   },
 
   devServer: {
@@ -54,5 +55,6 @@ export default defineNuxtConfig ({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+    // transpile: ['html2pdf.js'],
+  },
 });
